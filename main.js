@@ -1,20 +1,25 @@
-$("#commentForm").validate();
+$("#commentForm").validate({
+    rules: {
+        email: {
+            required: true,
+            email: true
+        },
+        name: {
+            required: true,
+            minlength: 3
+        }
+    },
+    submitHandler: function () {
 
-jQuery.validator.setDefaults({
-    debug: true,
-    success: "valid"
-});
-var form = $("#commentForm");
-form.validate();
+        $("button").on("click", function () {
+            let popap = $(".popap-message").css("display", "flex");
+            popap.show(1000, function () {
 
-
-$("button").click(function (event) {
-    let popap = $(".popap-message").css("display", "flex");
-    popap.show(1000, function() {
-
-        setTimeout(() => {
-            popap.hide(1000);
-        },3000)
-    });
-    event.preventDefault();
+                setTimeout(() => {
+                    popap.hide(1000);
+                    $("button").off('click');
+                }, 3000)
+            });
+        });
+    }
 });

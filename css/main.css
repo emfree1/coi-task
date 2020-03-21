@@ -355,6 +355,7 @@ body {
     justify-content: center;
     background: rgba(0, 0, 0, 0.9);
     align-items: flex-end;
+    transition: all 3s ease-in-out;
 }
 
 .popap-message-wapper {
@@ -366,6 +367,7 @@ body {
     width: 250px;
     height: 400px;
     margin-bottom: 100px;
+    transition: all 3s ease-in-out;
 }
 
 .error {

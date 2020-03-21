@@ -10,16 +10,9 @@ $("#commentForm").validate({
         }
     },
     submitHandler: function () {
-
-        $("button").on("click", function () {
-            let popap = $(".popap-message").css("display", "flex");
-            popap.show(function () {
-
+        let popap = $(".popap-message").css("display", "flex");
                 setTimeout(() => {
-                    popap.hide(1000);
-                    $("button").off('click');
+                    popap.css('display', 'none')
                 }, 3000)
-            });
-        });
     }
 });

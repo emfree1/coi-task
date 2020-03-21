@@ -13,7 +13,7 @@ $("#commentForm").validate({
 
         $("button").on("click", function () {
             let popap = $(".popap-message").css("display", "flex");
-            popap.show(1000, function () {
+            popap.show(function () {
 
                 setTimeout(() => {
                     popap.hide(1000);
